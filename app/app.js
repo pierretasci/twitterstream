@@ -1,6 +1,6 @@
-import React 			from "react";
+import React from "react";
 import {Router, Route} from "react-router";
-import {history} 	from "react-router/lib/BrowserHistory";
+import {history} from "react-router/lib/BrowserHistory";
 
 class App extends React.Component {
 	constructor(props) {
@@ -13,6 +13,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
+				HELLO
 			</div>
 		);
 	}
