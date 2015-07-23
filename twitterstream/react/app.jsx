@@ -8,10 +8,14 @@ var App = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<TwitterApp />
+				<TwitterApp tweets={initialState} />
 			</div>
 		);
 	}
 });
+
+React.render(<TwitterApp 
+	tweets={initialState} 
+	username={window.location.pathname.replace('/', '')} />, document.getElementById('react-root'));
 
 module.exports = App;
