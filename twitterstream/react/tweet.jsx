@@ -4,7 +4,10 @@ var moment = require('moment');
 var Tweet = React.createClass({
 
 	render: function() {
-		var tweet = this.props.text.split(' ');
+		var tweet = [];
+		if(this.props.text) {
+			tweet = this.props.text.split(' ');
+		}
 
 		tweet = tweet.map(function(text) {
 			if(text.indexOf('http') > -1) {
