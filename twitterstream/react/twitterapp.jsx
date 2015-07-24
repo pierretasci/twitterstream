@@ -36,7 +36,6 @@ var TwitterApp = React.createClass({
 		);
 	},
 	_newSearch: function() {
-		console.log("CALLED");
 		window.location.pathname = "/" + this.state.username;
 	}
 });

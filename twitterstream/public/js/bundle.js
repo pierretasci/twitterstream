@@ -34678,6 +34678,9 @@ var React = require('react');
 var TwitterApp = require('./twitterapp.jsx');
 
 var initialState = JSON.parse(document.getElementById('initial-state').innerHTML);
+if(Object.keys(initialState).length === 0) {
+	initialState = [];
+}
 
 var App = React.createClass({displayName: "App",
 
@@ -34772,7 +34775,6 @@ var TwitterApp = React.createClass({displayName: "TwitterApp",
 		);
 	},
 	_newSearch: function() {
-		console.log("CALLED");
 		window.location.pathname = "/" + this.state.username;
 	}
 });
