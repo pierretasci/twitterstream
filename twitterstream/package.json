@@ -6,7 +6,8 @@
     "watch": "watchify react/app.jsx -o public/js/bundle.js -v",
     "browserify": "browserify react/app.jsx | uglifyjs > public/js/bundle.js",
     "build": "npm run browserify ",
-    "start": "npm run watch & nodemon ./bin/www"
+    "start": "npm run watch & nodemon ./bin/www",
+    "deploy": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
