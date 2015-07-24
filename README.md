@@ -40,7 +40,7 @@ Lastly, run the app. In order to do this you will need a twitter client key and 
 TWITTER_CONSUMER_KEY=[consumer key] TWITTER_CONSUMER_SECRET=[secret key] npm start
 ```
 ## Heroku
-The app is available from heroku at https://sheltered-beyond-7498.herokuapp.com
+The app is available from heroku at https://pttwitterstream.herokuapp.com/
 
 ## Tests
 This is ideally something I would have done as I went but again it was done in 4 hours. This should be the next step.
