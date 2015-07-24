@@ -1,5 +1,8 @@
 var React = require('react/addons');
 var Tweet = require('./tweet.jsx');
+var Bootstrap = require('react-bootstrap');
+var Input = Bootstrap.Input;
+var Button = Bootstrap.Button; 
 
 var TwitterApp = React.createClass({
 	mixins: [React.addons.LinkedStateMixin],
@@ -14,11 +17,18 @@ var TwitterApp = React.createClass({
 		};
 	},
 	render: function() {
+		var submit = <Button bsStyle="primary" 
+			bsSize="large"
+			onClick={this._newSearch}>Submit</Button>;
+
 		return (
-			<div>
-				<h1>Pierre&#39;s Last 25 Tweets Reader</h1>
-				<input type="text" valueLink={this.linkState('username')} />
-				<button type="button" onClick={this._newSearch}>Submit</button>
+			<div className="container">
+				<h1>Last 25 Tweets Reader</h1>
+				<Input type="text" 
+					bsSize="large" 
+					valueLink={this.linkState('username')} 
+					placeholder="Enter twitter name..."
+					buttonAfter={submit} />
 				{this.props.tweets.map(function(tweet, i) {
 					return <Tweet {...tweet} key={i} />;
 				})}
